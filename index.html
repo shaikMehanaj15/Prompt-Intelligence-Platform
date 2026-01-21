@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prompt Intelligence Platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🧠 Prompt Intelligence Platform</h1>
+  <div>
+    <button id="darkToggle">🌙</button>
+    <button id="exportBtn">⬇ Export CSV</button>
+  </div>
+</header>
+
+<main class="dashboard">
+
+  <!-- Prompt Lab -->
+  <section class="card">
+    <h2>🛠 Prompt Engineering Lab</h2>
+
+    <textarea id="promptInput" placeholder="Write your AI prompt here..."></textarea>
+
+    <div class="stats">
+      <span id="charCount">0 Characters</span>
+      <span id="wordCount">0 Words</span>
+    </div>
+
+    <div class="controls">
+      <button onclick="formatPrompt()">Format</button>
+      <button onclick="enhancePrompt()">Enhance</button>
+      <button onclick="copyPrompt()">Copy</button>
+      <button onclick="clearPrompt()">Clear</button>
+    </div>
+
+    <pre id="output"></pre>
+  </section>
+
+  <!-- Labeling -->
+  <section class="card">
+    <h2>🏷 Data Labeling</h2>
+
+    <select id="category">
+      <option>General</option>
+      <option>Chatbot</option>
+      <option>Image</option>
+      <option>Code</option>
+      <option>Marketing</option>
+    </select>
+
+    <select id="label">
+      <option>Auto Detect</option>
+      <option>Positive</option>
+      <option>Neutral</option>
+      <option>Negative</option>
+    </select>
+
+    <input id="tags" placeholder="Add tags (comma separated)" />
+
+    <div class="controls">
+      <button onclick="savePrompt()">Save to Dataset</button>
+      <button onclick="startVoice()">🎤 Voice Input</button>
+      <button onclick="speakOutput()">🔊 Read Output</button>
+    </div>
+  </section>
+
+  <!-- Analytics -->
+  <section class="card">
+    <h2>📊 Analytics Dashboard</h2>
+
+    <div class="analytics">
+      <div>Total Prompts<br><b id="totalCount">0</b></div>
+      <div>Positive<br><b id="posCount">0</b></div>
+      <div>Neutral<br><b id="neuCount">0</b></div>
+      <div>Negative<br><b id="negCount">0</b></div>
+    </div>
+
+    <input id="search" placeholder="Search dataset..." />
+
+    <ul id="datasetList"></ul>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
