@@ -57,7 +57,7 @@ Designed as a portfolio project to demonstrate frontend skills and GenAI workflo
 
 
 ## 📸 Screenshots
-
+![Dashboard View](screenshot1.png)
 
 
 ---
